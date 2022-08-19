@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+/* color: #129B2E; */
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mainDiv {
+    height: 100vh;
+    width: 100%;
+}
+
+/* ==========================header======================= */
+header {
+    background-color: #fff;
+    z-index: 5;
+    width: 100%;
+}
+
+.navBar {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 5em;
+}
+
+.logo {
+    width: 50%;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    color: #707070;
+}
+
+/* =====================================content================================ */
+.content {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 5em);
+}
+
+/* =====================================Left side================================ */
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    background-color: #fff;
+}
+
+.form::after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 62%;
+    z-index: -1;
+    transform: skewX(25deg);
+}
+
+.form::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 62%;
+    z-index: -1;
+    transform: skewX(-25deg);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    z-index: -3;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    margin: 0 1.5em;
+    font-size: 35px;
+    height: 5em;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.signin-btn {
+    color: #129B2E;
+    z-index: 2;
+}
+
+.signup-btn {
+    z-index: 2;
+
+}
+
+/* =====================================Right side================================ */
+.photo {
+    background-image: url(../Images/5e36bf49b6cd2.png);
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.photo svg {
+    width: 25em;
+    height: 15em;
+    margin-bottom: 5em;
+}
+
+.photo p {
+    font-size: 20px;
+}
+
+.photo a {
+    text-decoration: none;
+    color: #129B2E;
+    margin: 2em 0;
+}
+
+.form {
+    z-index: 5;
+    width: 50%;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    color: #fff;
+    margin: 0.5em auto 1.5em;
+    width: 20%;
+}
+
+.social div img {
+    width: 100%;
+}
+
+.photo button {
+    color: #fff;
+    background-color: #129B2E;
+    height: 2.5em;
+    width: 6em;
+    border-radius: 10px;
+    font-size: 31px;
+    cursor: pointer;
+}
+
+@media (min-width:1024px) and (max-width:1440px) {
+    .form::after {
+        left: 56%;
+        transform: skewX(10deg);
+    }
+
+    .form::before {
+        left: 56%;
+        transform: skewX(-10deg);
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    .photo svg {
+        width: 15em;
+        height: 7em;
+        margin-bottom: 3em;
+    }
+
+    .photo p {
+        font-size: 1em;
+    }
+
+    .social {
+        width: 40%;
+    }
+
+    .form::after {
+        left: 58%;
+        transform: skewX(10deg);
+    }
+
+    .form::before {
+        left: 58%;
+        transform: skewX(-10deg);
+    }
+
+    button {
+        margin: 0 .5em;
+        font-size: 30px;
+        height: 5em;
+    }
+}
+
+@media (min-width:425px) and (max-width:767px) {
+    .navBar{
+        align-items: center;
+    }
+    .logo{
+        width: 20%;
+    }
+
+    .logo svg{
+        width: 100%;
+    }
+
+    header .sections {
+        font-size: 1.5em;
+        width: 80%;
+    }
+    .sections div{
+        padding-bottom: 0.2em;
+        font-size: 0.7em;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        height: calc(100vh - 5em);
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    button {
+        margin: 0 .5em;
+        font-size: 20px;
+        height: 5em;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .photo button {
+        height: 3em;
+        width: 10em;
+        margin-bottom: 2em;
+    }
+
+    .photo svg {
+        width: 15em;
+        height: 7em;
+        margin-bottom: 3em;
+    }
+
+    .form::after {
+        width: 0%;
+    }
+
+    .form::before {
+        width: 0%;
+    }
+
+    .social {
+        width: 30%;
+    }
+}
+@media (max-width:424px) {
+    .navBar{
+        align-items: center;
+    }
+    .logo{
+        width: 20%;
+    }
+
+    .logo svg{
+        width: 100%;
+    }
+
+    header .sections {
+        font-size: 1em;
+        width: 80%;
+    }
+    .sections div{
+        padding-bottom: 0.2em;
+        font-size: 0.7em;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        height: calc(100vh - 5em);
+    }
+
+    .form {
+        width: 100%;
+    }
+    .form::after {
+        width: 0%;
+    }
+
+    .form::before {
+        width: 0%;
+    }
+
+    button {
+        margin: 0 .5em;
+        font-size: 20px;
+        height: 5em;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .photo button {
+        height: 2em;
+        width: 6em;
+        margin-bottom: 2em;
+        font-size: 2em;
+    }
+
+    .photo svg {
+        width: 10em;
+        height: 5em;
+        margin-bottom: 3em;
+    }
+
+    .social {
+        width: 50%;
+    }
+
+}

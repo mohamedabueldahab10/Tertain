@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+/* color: #129B2E; */
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.signinForm{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+input{
+    height: 3em;
+    border: none;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    padding-left: 5em ;
+    margin-bottom: 3em;
+}
+
+input::placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.namePosition,
+.emailPosition,
+.passwordPosition{
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.passwordPosition svg{
+    position: absolute;
+    left: 50;
+    bottom: 3em;
+    z-index: 2;
+}
+.namePosition svg{
+    position: absolute;
+    left: 50;
+    bottom: 3em;
+    z-index: 2;
+}
+.emailPosition svg{
+    position: absolute;
+    left: 50;
+    bottom: 3em;
+    z-index: 2;
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    input::placeholder{
+        font-size: 1em;
+    }
+}
+@media (max-width:424px) {
+    input{
+        padding-left: 2.5em ;
+    }
+    input::placeholder{
+        font-size: 0.7em;
+    }
+
+}
